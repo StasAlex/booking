@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user.service';
 import { HttpClient } from '@angular/common/http';
 import { User } from '@booking/data';
 
@@ -11,15 +10,24 @@ import { User } from '@booking/data';
   styleUrls: ['./user-table.component.scss'],
 })
 export class UserTableComponent implements OnInit {
-  users: User[] = [];
+  users: User[];
 
-  constructor(private http: HttpClient,
-               private userService: UserService) {}
+  constructor(private http: HttpClient) {}
 
-  displayedColumns = ['id', 'name', 'email', 'password', 'isAdmin'];
+  displayedColumns = [
+    'id',
+    'name',
+    'email',
+    'password',
+    'isAdmin',
+    'actionsColumn',
+  ];
 
   getUsers() {
-    this.http.get<User[]>('/api').subscribe((users) => (this.users = users));
+    this.http
+      .get<User[]>('/api')
+      .subscribe((users) => (this.users = users));
+
   }
 
   ngOnInit(): void {

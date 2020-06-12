@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { User } from '@booking/data';
 
 @Injectable()
-export class AppService {
+export class UserService {
   users: User[] = [
     {
       id: '1',
@@ -40,6 +40,10 @@ export class AppService {
       isAdmin: false,
     },
   ];
+
+  getData(){
+    return 'Welcome to api!';
+  }
 
   getUsers(): User[] {
     return this.users;
