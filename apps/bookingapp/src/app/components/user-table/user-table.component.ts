@@ -15,7 +15,7 @@ export class UserTableComponent implements OnInit {
   constructor(private http: HttpClient,
     ) {}
 
-  displayedColumns = [
+  displayedColumns: string[] = [
     'id',
     'name',
     'email',
@@ -24,7 +24,7 @@ export class UserTableComponent implements OnInit {
     'actionsColumn',
   ];
 
-  getUsers() {
+  getUsers(): void {
     this.http
       .get<User[]>('/api')
       .subscribe((users) => (this.users = users));
@@ -34,6 +34,8 @@ export class UserTableComponent implements OnInit {
   ngOnInit(): void {
     this.getUsers();
   }
+
+  removeUser(id: string): void{}
 
 
 }
