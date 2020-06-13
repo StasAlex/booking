@@ -10,13 +10,13 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { HttpClientModule } from '@angular/common/http';
-import { UserTableComponent } from './components/user-table/user-table.component';
+import { UserTableContainerComponent } from './components/user-table-container/user-table-container.component';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, UserTableComponent],
+  declarations: [AppComponent, UserTableContainerComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
