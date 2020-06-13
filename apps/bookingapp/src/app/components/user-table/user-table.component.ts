@@ -12,7 +12,8 @@ import { User } from '@booking/data';
 export class UserTableComponent implements OnInit {
   users: User[];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,
+    ) {}
 
   displayedColumns = [
     'id',
@@ -33,4 +34,6 @@ export class UserTableComponent implements OnInit {
   ngOnInit(): void {
     this.getUsers();
   }
+
+
 }

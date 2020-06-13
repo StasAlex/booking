@@ -31,10 +31,11 @@
   </ng-container>
 
  <!-- Action Delete -->
+
   <ng-container matColumnDef="actionsColumn">
     <th mat-header-cell *matHeaderCellDef> Action </th>
     <td mat-cell *matCellDef="let element;  let j = index;">
-      <button mat-raised-button color="warn" focusable="false" (click)="deleteTicket(j)">
+      <button mat-raised-button color="warn" focusable="false" (click)="removeUser(id)">
         <i class="fa fa-times mat-icon"></i> Remove
       </button>
     </td>

@@ -41,7 +41,7 @@ export class UserService {
     },
   ];
 
-  getData(){
+  getData() {
     return 'Welcome to api!';
   }
 

@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "start:app": "ng serve --project=bookingapp",
+    "start:api": "ng serve --project=api",
+    "build:app": "ng build --project=bookingapp",
+    "build:api": "ng build --project=api",
     "ng": "ng",
     "nx": "nx",
     "start": "ng serve",
