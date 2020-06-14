@@ -1,13 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { User } from '@booking/data';
 
 @Component({
   selector: 'booking-user-table',
   templateUrl: './user-table.component.html',
-  styleUrls: ['./user-table.component.scss']
+  styleUrls: ['./user-table.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserTableComponent implements OnInit {
-
   @Input() users: User[];
   displayedColumns: string[] = [
     'id',
@@ -18,9 +18,7 @@ export class UserTableComponent implements OnInit {
     'actionsColumn',
   ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

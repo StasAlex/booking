@@ -39,6 +39,13 @@ export class UserService {
       password: 'alice',
       isAdmin: false,
     },
+    {
+      id: '6',
+      name: 'Bob',
+      email: 'bob@gmail.com',
+      password: 'bob',
+      isAdmin: false,
+    },
   ];
 
   getData() {
