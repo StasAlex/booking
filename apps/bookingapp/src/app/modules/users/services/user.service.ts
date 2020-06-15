@@ -14,7 +14,7 @@ constructor( private httpClient: HttpClient ){
 
   getUsers(): Observable<User[]> {
     return this.httpClient
-      .get<User[]>('/api')
+      .get<User[]>('/api/users')
   }
 
 
