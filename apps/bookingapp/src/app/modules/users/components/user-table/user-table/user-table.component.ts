@@ -15,7 +15,8 @@ export class UserTableComponent implements OnInit {
     'email',
     'password',
     'isAdmin',
-    'actionsColumn',
+    'edit',
+    'delete'
   ];
 
   constructor() {}

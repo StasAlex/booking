@@ -1,20 +1,24 @@
 <header class="flex">
-
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span>{{ title }}</span>
+      <span class="spacer"></span>
+      <a routerLink="/users" class="route-link">
+        <mat-icon>people</mat-icon>
+      </a>
+      <a routerLink="/rooms" color="primary" class="route-link">
+        <mat-icon>apartment</mat-icon>
+      </a>
     </mat-toolbar-row>
   </mat-toolbar>
-
 </header>
-
+<!--
 <main>
 
- <!-- <booking-user-table-container></booking-user-table-container>-->
+  <booking-user-table-container></booking-user-table-container>
    <booking-room-card-container></booking-room-card-container>
 
+
 </main>
-
+-->
 <router-outlet></router-outlet>
-
-

@@ -1,5 +1,5 @@
-<div class="container" *ngIf="rooms">
-  <div class="row justify-content-start">
+<div class="container-fluid" *ngIf="rooms">
+  <div class="room-cards justify-content-start user-table mt-5">
     <div class="card" *ngFor="let room of rooms">
       <img class="card-img-top img-fluid img-height"
         src="{{room.imageUrl}}"

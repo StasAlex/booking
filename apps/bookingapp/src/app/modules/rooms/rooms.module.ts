@@ -9,14 +9,16 @@ import { RoomCardComponent } from './components/room-card/room-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from '../../components/app/app.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
-  declarations: [AppComponent, RoomCardContainerComponent, RoomCardComponent],
+  declarations: [RoomCardContainerComponent, RoomCardComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
+    MatIconModule,
   ],
   providers: [RoomsService],
 })

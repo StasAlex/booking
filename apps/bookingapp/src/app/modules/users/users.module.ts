@@ -10,8 +10,9 @@ import { AppComponent } from '../../components/app/app.component';
 import { UserTableContainerComponent } from './containers/user-table/user-table-container.component';
 import { UserTableComponent } from './components/user-table/user-table/user-table.component';
 import { UserService } from './services/user.service';
+import { MatIconModule } from '@angular/material/icon';
 @NgModule({
-  declarations: [UserTableContainerComponent, UserTableComponent],
+  declarations: [AppComponent, UserTableContainerComponent, UserTableComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
@@ -19,6 +20,7 @@ import { UserService } from './services/user.service';
     MatTableModule,
     MatToolbarModule,
     HttpClientModule,
+    MatIconModule,
   ],
   providers: [UserService],
 })

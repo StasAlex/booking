@@ -4,6 +4,11 @@ import { UsersModule } from './modules/users/users.module';
 import { RoomsModule } from './modules/rooms/rooms.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './components/app/app.component';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 
 
@@ -13,8 +18,13 @@ import { AppComponent } from './components/app/app.component';
     MatToolbarModule,
     UsersModule,
     RoomsModule,
-    AppRoutingModule
-    ],
+    AppRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    BrowserAnimationsModule,
+    MatTooltipModule,
+  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent],
 })
