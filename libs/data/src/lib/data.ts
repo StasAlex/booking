@@ -13,4 +13,5 @@ export interface Rooms {
   notes: string;
   isClean: boolean;
   price: number;
+  imageUrl: string;
 }

@@ -6,4 +6,5 @@ export interface RoomListItem {
   notes: string;
   isClean: boolean;
   price: number;
+  imageUrl: string;
 }

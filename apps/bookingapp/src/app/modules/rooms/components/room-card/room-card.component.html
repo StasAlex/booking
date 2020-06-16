@@ -1,11 +1,21 @@
-<ul>
-  <li *ngFor="let room of rooms">
-    {{room.id}}
-    {{room.number}}
-    {{room.rooms}}
-    {{room.people}}
-    {{room.notes}}
-    {{room.isClean}}
-    {{room.price}}
-  </li>
-</ul>
+<div class="container" *ngIf="rooms">
+  <div class="row justify-content-start">
+    <div class="card" *ngFor="let room of rooms">
+      <img class="card-img-top img-fluid img-height"
+        src="{{room.imageUrl}}"
+        alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title">${{room.price}}</h3>
+        <h6>ID-{{room.id}}</h6>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>Room Number: {{room.number}}</li>
+          <li>Rooms: {{room.rooms}}</li>
+          <li>People: {{room.people}}</li>
+        </ul>
+        <p class="card-text"><small class="text-muted">
+            <p class="card-text">{{room.notes}}</p>
+          </small></p>
+      </div>
+    </div>
+  </div>
+</div>

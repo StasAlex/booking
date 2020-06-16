@@ -10,12 +10,8 @@ import { AppComponent } from '../../components/app/app.component';
 import { UserTableContainerComponent } from './containers/user-table/user-table-container.component';
 import { UserTableComponent } from './components/user-table/user-table/user-table.component';
 import { UserService } from './services/user.service';
-
-
-
-
 @NgModule({
-  declarations: [ UserTableContainerComponent, UserTableComponent],
+  declarations: [UserTableContainerComponent, UserTableComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),

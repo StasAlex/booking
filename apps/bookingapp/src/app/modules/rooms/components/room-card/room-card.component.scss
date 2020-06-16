@@ -1,3 +1,13 @@
-.room-cards{
-  width: 100%;
+.card-group {
+  display: flex;
+}
+.card {
+  flex-basis: 250px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid grey !important;
+  flex-grow: 0;
+}
+.img-height{
+  height: 40%;
 }
