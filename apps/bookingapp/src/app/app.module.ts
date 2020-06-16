@@ -1,12 +1,14 @@
+import { MatToolbarModule } from "@angular/material/toolbar";
 import { NgModule } from '@angular/core';
 import { UsersModule } from './modules/users/users.module';
-import { AppComponent } from './components/app/app.component';
 import { RoomsModule } from './modules/rooms/rooms.module';
+import { AppComponent } from './components/app/app.component';
+
 
 
 @NgModule({
   declarations: [],
-  imports: [UsersModule, RoomsModule],
+  imports: [RoomsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

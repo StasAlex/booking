@@ -10,7 +10,7 @@ import { RoomsService } from '../../services/rooms.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [RoomsService],
 })
-export class UserTableContainerComponent implements OnInit {
+export class RoomCardContainerComponent implements OnInit {
   rooms$: Observable<Rooms[]>;
 
   constructor(private readonly roomsService: RoomsService) {}

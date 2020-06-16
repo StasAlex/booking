@@ -15,7 +15,7 @@ import { UserService } from './services/user.service';
 
 
 @NgModule({
-  declarations: [AppComponent, UserTableContainerComponent, UserTableComponent],
+  declarations: [ UserTableContainerComponent, UserTableComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
@@ -26,4 +26,4 @@ import { UserService } from './services/user.service';
   ],
   providers: [UserService],
 })
-export class UsersModule { }
+export class UsersModule {}
