@@ -7,6 +7,9 @@
   margin-bottom: 10px;
   border: 1px solid grey !important;
   flex-grow: 0;
+  &:last-child{
+    margin-right: 0;
+  }
 }
 .img-height{
   height: 40%;
@@ -16,3 +19,4 @@
   flex-wrap: wrap;
   width: 100%;
 }
+

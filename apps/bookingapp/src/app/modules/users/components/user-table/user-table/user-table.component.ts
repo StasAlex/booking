@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { User } from '@booking/data';
+import { UserService } from '../../../services/user.service';
 
 @Component({
   selector: 'booking-user-table',
@@ -18,8 +19,11 @@ export class UserTableComponent implements OnInit {
     'edit',
     'delete'
   ];
+  title: string;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.title = this.userService.getTitle();
+  }
 }

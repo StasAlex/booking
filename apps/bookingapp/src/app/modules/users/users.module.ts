@@ -11,6 +11,7 @@ import { UserTableContainerComponent } from './containers/user-table/user-table-
 import { UserTableComponent } from './components/user-table/user-table/user-table.component';
 import { UserService } from './services/user.service';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [AppComponent, UserTableContainerComponent, UserTableComponent],
   imports: [
@@ -21,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatToolbarModule,
     HttpClientModule,
     MatIconModule,
+    MatButtonModule,
   ],
   providers: [UserService],
 })

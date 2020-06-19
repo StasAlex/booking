@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
 import { Rooms } from '@booking/data';
+import { RoomsService } from '../../services/rooms.service';
 
 @Component({
   selector: 'booking-room-card',
@@ -10,7 +11,11 @@ import { Rooms } from '@booking/data';
 export class RoomCardComponent implements OnInit {
   @Input() rooms: Rooms[];
 
-  constructor() {}
+  title: string;
 
-  ngOnInit() {}
+  constructor(private roomService: RoomsService) {}
+
+  ngOnInit() {
+    this.title = this.roomService.getTitle();
+  }
 }

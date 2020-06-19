@@ -4,18 +4,17 @@ import { HttpClient } from '@angular/common/http';
 import { Rooms } from '@booking/data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RoomsService {
+  constructor(private httpClient: HttpClient) {}
 
-constructor( private httpClient: HttpClient ){
-
-}
+  title = 'Apartment List';
 
   getRooms(): Observable<Rooms[]> {
-    return this.httpClient
-      .get<Rooms[]>('/api/rooms')
+    return this.httpClient.get<Rooms[]>('/api/rooms');
   }
-
-
+  getTitle(): string {
+    return this.title;
+  }
 }

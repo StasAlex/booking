@@ -4,18 +4,17 @@ import { HttpClient } from '@angular/common/http';
 import { User } from '@booking/data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
+  constructor(private httpClient: HttpClient) {}
 
-constructor( private httpClient: HttpClient ){
-
-}
+  title = 'Users List';
 
   getUsers(): Observable<User[]> {
-    return this.httpClient
-      .get<User[]>('/api/users')
+    return this.httpClient.get<User[]>('/api/users');
   }
-
-
+  getTitle(): string {
+    return this.title;
+  }
 }

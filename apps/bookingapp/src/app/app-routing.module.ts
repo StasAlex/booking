@@ -2,11 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserTableContainerComponent } from './modules/users/containers/user-table/user-table-container.component';
 import { RoomCardContainerComponent } from './modules/rooms/containers/room-card/room-card-container.component';
+import { HomeContainerComponent } from './modules/home/containers/homeContainer/homeContainer.component';
 // CLI imports router
 
 const routes: Routes = [
-  { path: '', redirectTo: '/rooms', pathMatch: 'full' },
-
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'home',
+    component: HomeContainerComponent,
+  },
   {
     path: 'users',
     component: UserTableContainerComponent,
