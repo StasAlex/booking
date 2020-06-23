@@ -1,20 +1,25 @@
-main{
+main {
   padding: 20px;
 }
-.spacer{
+
+.spacer {
   flex: 1 0 auto;
 }
-.app-title{
+
+.app-title {
   padding-left: 10px;
 }
+
 .route-link {
   color: white;
   padding: 0 14px;
   text-decoration: none;
-  &:hover{
+
+  &:hover {
     cursor: pointer;
   }
-  &__home{
+
+  &__home {
     display: flex;
     align-items: center;
   }

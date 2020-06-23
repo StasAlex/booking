@@ -1,0 +1,20 @@
+<header class="flex">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <a routerLink="/home" class="route-link route-link__home">
+        <mat-icon>home_work</mat-icon>
+        <span class="app-title">{{ title }}</span>
+      </a>
+      <span class="spacer"></span>
+      <button mat-icon-button color="primary">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <a routerLink="/users" class="route-link">
+        <mat-icon>people</mat-icon>
+      </a>
+      <a routerLink="/rooms" color="primary" class="route-link">
+        <mat-icon>apartment</mat-icon>
+      </a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>

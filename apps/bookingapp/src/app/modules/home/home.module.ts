@@ -4,6 +4,12 @@ import { SearchFormContainerComponent } from './containers/searchFormContainer/s
 import { SearchFormComponent } from './components/searchForm/searchForm.component';
 import { HomeContainerComponent } from './containers/homeContainer/homeContainer.component';
 import { HomeComponent } from './components/home/home.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 
@@ -14,6 +20,14 @@ import { HomeComponent } from './components/home/home.component';
     HomeContainerComponent,
     HomeComponent,
   ],
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    FormsModule,
+    MatInputModule,
+    ReactiveFormsModule,
+  ],
 })
 export class HomeModule {}

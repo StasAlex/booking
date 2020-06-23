@@ -1,3 +1,16 @@
-<p>
-  searchForm works!
-</p>
+<div class="container section text-center">
+  <mat-form-field>
+    <mat-label>Arrival date</mat-label>
+    <input matInput [matDatepicker]="picker1" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+    <mat-datepicker #picker1></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Departure date</mat-label>
+    <input matInput [matDatepicker]="picker2" [formControl]="serializedDate">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+  </mat-form-field>
+
+</div>

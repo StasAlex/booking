@@ -13,10 +13,10 @@ import { UserService } from './services/user.service';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 @NgModule({
-  declarations: [AppComponent, UserTableContainerComponent, UserTableComponent],
+  declarations: [UserTableContainerComponent, UserTableComponent],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forChild([]),
     BrowserAnimationsModule,
     MatTableModule,
     MatToolbarModule,
