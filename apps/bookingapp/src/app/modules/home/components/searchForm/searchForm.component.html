@@ -1,16 +1,39 @@
-<div class="container section text-center">
-  <mat-form-field>
-    <mat-label>Arrival date</mat-label>
-    <input matInput [matDatepicker]="picker1" [formControl]="date">
-    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-    <mat-datepicker #picker1></mat-datepicker>
-  </mat-form-field>
+<div class="container-fluid section">
+  <h2 class="title">{{title}}</h2>
+  <form class="mt-5">
+    <mat-form-field>
+      <mat-label>Arrival date</mat-label>
+      <input matInput [matDatepicker]="picker1" [formControl]="date">
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1 [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
 
-  <mat-form-field>
-    <mat-label>Departure date</mat-label>
-    <input matInput [matDatepicker]="picker2" [formControl]="serializedDate">
-    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-    <mat-datepicker #picker2></mat-datepicker>
-  </mat-form-field>
+    <mat-form-field>
+      <mat-label>Departure date</mat-label>
+      <input matInput [matDatepicker]="picker2" [formControl]="serializedDate">
+      <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+      <mat-datepicker #picker2 [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
 
+    <mat-form-field>
+      <mat-select placeholder="Adults">
+        <mat-option *ngFor="let adult of adults" [value]="adult.value">
+          {{adult.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-hint>After 14 years old</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-select placeholder="Infants">
+        <mat-option *ngFor="let baby of babies" [value]="baby.value">
+          {{baby.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-hint>Before 14 years old</mat-hint>
+    </mat-form-field>
+
+    <button mat-flat-button color="primary">Book now</button>
+
+  </form>
 </div>
