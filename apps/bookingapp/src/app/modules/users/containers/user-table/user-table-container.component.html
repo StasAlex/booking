@@ -1,1 +1,4 @@
-<booking-user-table [users]="users$ | async"></booking-user-table>
+<booking-user-table
+  [users]="users$ | async"
+  (deleteUserEvent)="onDeleteUser($event)"
+></booking-user-table>

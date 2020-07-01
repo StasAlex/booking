@@ -1,7 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { Observable, of } from 'rxjs';
-import { users } from '../../../mocks/users.data';
-import { UserListItem } from '../../../models/user.interface';
 import { User } from '../user.entity';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -18,7 +15,7 @@ export class UserService {
     return await this.userRepository.find();
   }
 
-  async create(user: User): Promise<User> {
+  async create(user: Omit<User, 'id'>): Promise<User> {
     return await this.userRepository.save(user);
   }
 
@@ -30,15 +27,15 @@ export class UserService {
     return await this.userRepository.delete(id);
   }
 
-  public getData() {
-    return 'Welcome to api!';
-  }
+  // public getData() {
+  //   return 'Welcome to api!';
+  // }
 
-  public getUsers(): Observable<UserListItem[]> {
-    return of(users);
-  }
-  addUser(user: UserListItem) {
-    users.push(user);
-    return of(users);
-  }
+  // public getUsers(): Observable<UserListItem[]> {
+  //   return of(users);
+  // }
+  // addUser(user: UserListItem) {
+  //   users.push(user);
+  //   return of(users);
+  // }
 }

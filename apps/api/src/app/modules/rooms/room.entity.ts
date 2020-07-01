@@ -1,11 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity('room')
+@Entity()
 export class Room {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({length: 500})
   number: string;
 
   @Column()
@@ -14,7 +14,7 @@ export class Room {
   @Column()
   people: number;
 
-  @Column()
+  @Column('text')
   notes: string;
 
   @Column({ default: true })

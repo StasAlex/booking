@@ -9,12 +9,16 @@ import { User } from '@booking/data';
 export class UserService {
   constructor(private httpClient: HttpClient) {}
 
+  readonly path = '/api/users';
   title = 'Users List';
 
   getUsers(): Observable<User[]> {
-    return this.httpClient.get<User[]>('/api/users');
+    return this.httpClient.get<User[]>(this.path);
   }
   getTitle(): string {
     return this.title;
+  }
+  delete(id: string): Observable<User> {
+    return this.httpClient.delete<User>(`${this.path}/${id}`);
   }
 }

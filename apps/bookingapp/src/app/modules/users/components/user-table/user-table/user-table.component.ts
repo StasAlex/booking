@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
 import { User } from '@booking/data';
 import { UserService } from '../../../services/user.service';
 
@@ -10,20 +10,27 @@ import { UserService } from '../../../services/user.service';
 })
 export class UserTableComponent implements OnInit {
   @Input() users: User[];
+  @Output() deleteUserEvent: EventEmitter<string> = new EventEmitter();
   displayedColumns: string[] = [
-    'id',
+
     'name',
     'email',
     'password',
     'isAdmin',
     'edit',
-    'delete'
+    'delete',
   ];
   title: string;
 
   constructor(private userService: UserService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.title = this.userService.getTitle();
   }
+
+  onDeleteUser({ name, id }: User): void {
+    if (confirm(`Do you really want to delete user "${name}"?`)) {
+    this.deleteUserEvent.emit(id);
+  }
+}
 }

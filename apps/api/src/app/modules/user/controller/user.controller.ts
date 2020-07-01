@@ -14,18 +14,18 @@ export class UserController {
   }
 
   @Post('create')
-  async create(@Body() userData: User): Promise<any> {
+  async create(@Body() userData: Omit<User, 'id'>): Promise<User> {
     return this.userService.create(userData);
   }
 
-  @Put(':id/update')
+  @Put(':id')
   async update(@Param('id') id, @Body() userData: User): Promise<any> {
     userData.id = Number(id);
     console.log('Update #' + userData.id);
     return this.userService.update(userData);
   }
 
-  @Delete(':id/delete')
+  @Delete(':id')
   async delete(@Param('id') id): Promise<any> {
     return this.userService.delete(id);
   }
